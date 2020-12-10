@@ -1,0 +1,84 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.css");
+
+body {
+
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+.chart {
+    width: 100%;
+    height: auto;
+}
+
+.custom-select {
+    border: solid 2px;
+    border-radius: 10px;
+    background:#DCDCDC;
+    font-weight: bold;
+    cursor: pointer;
+}
+.custom-select option {
+    font-weight: bold;
+}
+
+.form-control {
+    background:#DCDCDC;
+}
+
+.bota-adicionar {
+    padding-left: 15%;
+
+}
+.btn-primary {
+    overflow: auto;
+    padding: 10px;
+    background: #212529;
+    margin-top: 1%;
+    border: solid 2px;
+    border-radius: 10px;
+    margin-left: 25%;
+}
+
+.btn-primary:hover {
+    background: #212529;
+    font-weight: bold;
+    border: gray;
+}
+
+footer {
+    margin-top: auto;
+}
+
+.link-site {
+    color: white;
+    font-weight: bold;
+    margin-bottom: 0px;
+}
+
+.footer-copyright {
+    color: white;
+}
+
+.btn-outline-primary {
+    display: inline-block ;
+    overflow: auto;
+    border: solid 1px red;
+}
+
+.btn-outline-primary:hover {
+    background: red;
+    border: red;
+}
+
+
+
+
+
+
+
+
+
+
+
+
