@@ -13,7 +13,7 @@ class DashboardController extends Controller
     {
         $user = Auth::user();
         $name = Auth::user()->name;
-        $teste = $user->userapi->Username;
+        $teste = $user->userapi->Password;
 
         return view('dashboard', compact('name','teste'));
     }
