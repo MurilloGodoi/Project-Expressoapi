@@ -31,6 +31,7 @@
         </ul>
     </div>
     <p style="color: white">{{ $name }}</p>
+    <p style="color: white">{{ $teste }}</p>
     <a href="/logout" class="text-danger">Sair</a>
 </nav>
 

@@ -20,12 +20,12 @@ class User extends Authenticatable
     protected $primaryKey = 'Id';
     public $timestamps = false;
     protected $fillable = [
-        'Email',
-        'Password',
-        'AccsessToken',
-        'Document',
-        'Name',
-        'Phone'
+        'email',
+        'password',
+        'accsessToken',
+        'document',
+        'name',
+        'phone'
     ];
 
 
@@ -48,28 +48,29 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
+
     public  function userapi()
     {
-        return $this->hasOne(UserApi::class,'userid');
+        return $this->hasOne(UserApi::class,'userId');
     }
 
     public  function userconfiguration()
     {
-        return $this->hasOne(UserConfiguration::class,'userid');
+        return $this->hasOne(UserConfiguration::class,'userId');
     }
 
     public  function userplanhistory()
     {
-        return $this->hasOne(UserConfiguration::class);
+        return $this->hasOne(UserPlanHistories::class, 'UserId');
     }
 
     public function userplan()
     {
-        return $this->hasOne(UserPlan::class,'userid');
+        return $this->hasOne(UserPlan::class,'userId');
     }
 
     public function userapirequest()
     {
-        return $this->hasOne(UserApiRequest::class);
+        return $this->hasOne(UserApiRequest::class, 'userId');
     }
 }

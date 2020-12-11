@@ -8,11 +8,6 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Mail;
 
-class Testexd
-{
-    public $email = 'murillogodoi3@hotmail.com';
-    public $name = 'Murillim';
-}
 
 class NewPasswordController extends Controller
 {
@@ -25,8 +20,7 @@ class NewPasswordController extends Controller
     public function newpasandemail(Request $request)
     {
         $emailrequest = $request->email;
-        $user = User::where('Email', $emailrequest)->first();
-
+        $user = User::where('email', $emailrequest)->first();
 
         if(!$user)
         {
@@ -40,16 +34,16 @@ class NewPasswordController extends Controller
 
         else {
                 $newpassword = $this->randomPassword();
-                $user->Password = Hash::make($newpassword);
+                $user->password = Hash::make($newpassword);
                 $user->save();
 
                 $email = new NewPassword(
-                    $user->Name,
+                    $user->name,
                     $newpassword
                 );
 
-                $teste = ['email' => 'murillogodoi3@hotmail.com', 'name' => 'Murillo'];
-                Mail::to(Testexd::class)->send($email);
+
+                Mail::to($user)->send($email);
 
                 $request->session()
                     ->flash(

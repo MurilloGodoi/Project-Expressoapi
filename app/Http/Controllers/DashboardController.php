@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Api;
-use App\User;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -11,18 +11,10 @@ class DashboardController extends Controller
 {
     public function index()
     {
-        $name = Auth::user()->name;
         $user = Auth::user();
+        $name = Auth::user()->name;
+        $teste = $user->userapi->Username;
 
-        $user->userconfiguration->smtpport=50;
-
-        $user->save();
-        $nome =  $user->userconfiguration->smtpport;
-
-
-
-
-
-        return view('dashboard', compact('name'));
+        return view('dashboard', compact('name','teste'));
     }
 }
