@@ -1,23 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="e2c1beb3-abac-4259-9ec0-2e3520cb1e12" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/DashboardController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/DashboardController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/NewPasswordController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/NewPasswordController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/SettingsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/SettingsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Api.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Api.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Plan.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Plan.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/UserApi.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/UserApi.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/UserApiRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/UserApiRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/UserConfiguration.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/UserConfiguration.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/UserPlan.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/UserPlan.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/UserPlanHistories.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/UserPlanHistories.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layout.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/mail/new-password.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/mail/new-password.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/password.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/password.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/settings.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/settings.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -174,12 +182,25 @@
       <updated>1607632269100</updated>
       <workItem from="1607632270231" duration="14676000" />
       <workItem from="1607657215873" duration="191000" />
-      <workItem from="1607723803487" duration="20885000" />
+      <workItem from="1607723803487" duration="21291000" />
+      <workItem from="1607783638804" duration="4430000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="690" y="295" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1607732986416">

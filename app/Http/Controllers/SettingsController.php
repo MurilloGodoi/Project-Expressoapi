@@ -17,20 +17,17 @@ class SettingsController extends Controller
         $name = $user->name;
         $id = $user->Id;
         $userapi = UserApi::where('userId', $id)->first();
+        $mensagem = $request->session()->get('mensagem');
 
         if(!$userapi)
         {
-            return view('settings',compact('name','mensagem','apiname'));
+            return view('settings',compact('name','mensagem'));
         }
 
         $apiid = $userapi->ApiId;
         $apiname = Api::find($apiid)->Name;
 
-        $mensagem = $request->session()->get('mensagem');
-
-
         return view('settings',compact('name','mensagem','apiname'));
-
 
     }
 
@@ -47,13 +44,16 @@ class SettingsController extends Controller
 
         }
 
-        $apid = $request->id;
+        $apiid = $request->id;
         $username = $request->email;
         $password =  $request->password;
-        $userapi->ApiId = $apid;
-        $userapi->Username = $username;
-        $userapi->Password = $password;
-        $userapi->save();
+
+        $create_userapi = new UserApi;
+        $create_userapi->userId = $id;
+        $create_userapi->ApiId = $apiid;
+        $create_userapi->Username = $username;
+        $create_userapi->Password = $password;
+        $create_userapi->save();
 
         $request->session()
             ->flash(

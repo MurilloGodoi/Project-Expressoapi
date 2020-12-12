@@ -24,12 +24,10 @@ class NewPasswordController extends Controller
 
         if(!$user)
         {
-              $request->session()
-                  ->flash(
-                      'mensagem',
-                      "O email inserido não existe em nossa base de dados"
-                  );
-              return redirect()->back();
+              $request->session();
+                  return redirect()
+                      ->back()
+                      ->withErrors('O email inserido não consta em nossa base de dados');
         }
 
         else {

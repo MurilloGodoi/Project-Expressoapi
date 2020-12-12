@@ -23,7 +23,7 @@
 
         <div class="col-5">
             <div class="mb-3 bg-dark p-2 pl-3">
-                <h3 class="text-light">Selecione abaixo os provedores</h3>
+                <h3 class="text-light">Adicione um provedor</h3>
             </div>
             <form method="post">
                 @csrf
@@ -41,6 +41,7 @@
             </form>
         </div>
 
+        @if(!empty($apiname))
         <div class="col-5 offset-1">
             <div class="mb-3 bg-dark p-2 pl-3">
                 <h3 class="text-light">Seus Provedores</h3>
@@ -57,7 +58,7 @@
                     <tr>
                         <th scope="row">{{$apiname}}</th>
                         <td>
-                            <form method="post" id="excluir">
+                            <form method="post" id="excluir" onsubmit="return confirm('Deseja realmente excluir o provedor {{$apiname}}?')">
                                 @method('DELETE')
                                 @csrf
                             <button type="submit" form="excluir" type="button" class="btn btn-outline-primary">
@@ -75,6 +76,7 @@
             </div>
 
         </div>
+        @endif
     </div>
 </div>
 

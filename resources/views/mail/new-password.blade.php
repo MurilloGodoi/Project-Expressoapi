@@ -1,7 +1,12 @@
+@component('mail::panel')
+    MAGIT IT - Recuperação de senha
+@endcomponent
+
+
 @component('mail::message')
-    #MAGIT IT - Recuperação de senha
-    Olá {{$name}} !!
-    Sua nova senha é: {{$password}}
-    Você já pode realizar login com essa nova senha
+    Olá {{$name}} !!<br>
+    Sua nova senha é: {{$password}}<br>
+    Você já pode realizar login com essa nova senha<br>
     Qualquer dúvida, pode entrar em contato com nosso suporte pelo email: magitit@suporte.com
 @endcomponent
+
