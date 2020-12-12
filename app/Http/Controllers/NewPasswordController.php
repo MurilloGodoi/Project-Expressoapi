@@ -50,7 +50,7 @@ class NewPasswordController extends Controller
                         'mensagem',
                         "A sua nova senha foi enviada em seu email"
                     );
-                return redirect()->route('entrar');
+                return redirect()->route('login');
         }
 
     }

@@ -17,15 +17,15 @@
             <div class="d-flex justify-content-around mt-3 p-2">
                 <div class="d-flex flex-column text-center">
                     <p class="m-0">CONTRATADO</p>
-                    <p class="text-primary m-0">10000</p>
+                    <p class="text-success m-0">{{ $sms_credits}}</p>
                 </div>
                 <div class="d-flex flex-column text-center">
                     <p class="m-0">UTILIZADO</p>
-                    <p class="text-success m-0">2000</p>
+                    <p class="text-primary m-0">{{ $requests_quantity}}</p>
                 </div>
                 <div class="d-flex flex-column text-center">
                     <p class="m-0">EXTRAS</p>
-                    <p class="text-danger m-0">0</p>
+                    <p class="text-danger m-0">{{ $extras}}</p>
                 </div>
             </div>
 

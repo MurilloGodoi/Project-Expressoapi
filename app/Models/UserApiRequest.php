@@ -15,4 +15,14 @@ class UserApiRequest extends Model
     protected $fillable = [
         'Name'
     ];
+
+    public  function user()
+    {
+        return $this->belongsTo(User::class,'UserId');
+    }
+
+    public  function plan()
+    {
+        return $this->belongsTo(Plan::class,'PlanId');
+    }
 }

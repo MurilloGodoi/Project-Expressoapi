@@ -15,15 +15,17 @@ use App\Http\Controllers;
 */
 
 
-Route::get('/', [Controllers\LoginController::class, 'index'])->name('entrar');
+Route::get('/', [Controllers\LoginController::class, 'index'])->name('login');
 Route::post('/', [Controllers\LoginController::class, 'login']);
-Route::get('/dashboard', [Controllers\DashboardController::class, 'index'])->name('dashboard');
+Route::get('/dashboard', [Controllers\DashboardController::class, 'index'])->name('dashboard')->middleware('auth');
 Route::get('/resume', [Controllers\ResumeController::class, 'index'])->name('resume')->middleware('auth');
-Route::get('/settings', [Controllers\SettingsController::class, 'index'])->name('settings');
+Route::get('/settings', [Controllers\SettingsController::class, 'index'])->name('settings')->middleware('auth');
+Route::post('/settings', [Controllers\SettingsController::class, 'store']);
+Route::delete('/settings', [Controllers\SettingsController::class, 'destroy']);
 Route::get('/newpassword', [Controllers\NewPasswordController::class, 'index'])->name('newpassword');
 Route::post('/newpassword', [Controllers\NewPasswordController::class, 'newpasandemail'])->name('newpassword');
 
-//Auth::routes();
+
 
 Route::get('/logout', function (){
     \Illuminate\Support\Facades\Auth::logout();

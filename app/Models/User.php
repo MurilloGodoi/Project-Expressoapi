@@ -66,7 +66,7 @@ class User extends Authenticatable
 
     public function userplan()
     {
-        return $this->hasOne(UserPlan::class,'userId');
+        return $this->hasOne(UserPlan::class,'userId', );
     }
 
     public function userapirequest()

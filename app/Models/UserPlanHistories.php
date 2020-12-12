@@ -16,4 +16,14 @@ class UserPlanHistories extends Model
         'DtStart',
         'DtEnd'
     ];
+
+    public  function user()
+    {
+        return $this->belongsTo(User::class,'UserId');
+    }
+
+    public  function plan()
+    {
+        return $this->belongsToMany(Plan::class,'PlanId');
+    }
 }

@@ -15,4 +15,14 @@ class UserPlan extends Model
     protected $fillable = [
         'SMSCredits'
     ];
+
+    public  function user()
+    {
+        return $this->belongsToMany(User::class,'userId');
+    }
+
+    public  function plan()
+    {
+        return $this->belongsTo(Plan::class,'planId');
+    }
 }

@@ -17,4 +17,14 @@ class Plan extends Model
         'Requests',
         'Price'
     ];
+
+    public  function userplanhistories()
+    {
+        return $this->hasMany(UserPlanHistories::class,'PlanId');
+    }
+
+    public  function userplan()
+    {
+        return $this->hasMany(UserPlan::class,'planId');
+    }
 }

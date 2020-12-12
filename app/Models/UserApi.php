@@ -10,10 +10,22 @@ class UserApi extends Model
     use HasFactory;
 
     protected $table = 'userapi';
-    protected $primaryKey = 'Id';
+    protected $primaryKey = 'ApiId';
     public $timestamps = false;
     protected $fillable = [
         'Username',
-        'Password'
+        'Password',
+        'userId'
+
     ];
+
+    public  function user()
+    {
+        return $this->belongsTo(User::class,'userId');
+    }
+
+    public  function api()
+    {
+        return $this->belongsTo(Api::class,'ApiId');
+    }
 }

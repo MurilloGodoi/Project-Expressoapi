@@ -20,4 +20,9 @@ class UserConfiguration extends Model
         'TrackingEmailTemplate',
         'TrackingEmailEventTemplate'
     ];
+
+    public  function user()
+    {
+        return $this->belongsTo(User::class,'userId');
+    }
 }

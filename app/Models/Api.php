@@ -16,8 +16,8 @@ class Api extends Model
         'Name'
     ];
 
-    public  function user()
+    public  function userapi()
     {
-        return $this->hasOne(User::class,'userid');
+        return $this->hasOne(UserApi::class,'ApiId');
     }
 }
