@@ -18,11 +18,11 @@
                     <p class="text-primary m-0">{{ $requests_quantity}}</p>
                 </div>
                 <div class="d-flex flex-column text-center">
-                    <p class="m-0">LIVRE</p>
+                    <p class="m-0">DISPONÍVEL</p>
                     <p class="text-primary m-0">{{ $requests_quantity}}</p>
                 </div>
                 <div class="d-flex flex-column text-center">
-                    <p class="m-0">EXTRAS</p>
+                    <p class="m-0">ULTRAPASSADO</p>
                     <p class="text-danger m-0">{{ $extras}}</p>
                 </div>
             </div>
@@ -80,16 +80,16 @@
                     <thead class="thead-light">
                         <tr>
                             <th class="text-center" scope="col">Provedor</th>
-                            <th class="text-center" scope="col">Quantidade</th>
-                            <th class="text-center" scope="col">Usados</th>
-                            <th class="text-center" scope="col">Disponíveis</th>
-                            <th class="text-center" scope="col">Extras</th>
+                            <th class="text-center" scope="col">Contratado</th>
+                            <th class="text-center" scope="col">Utilizado</th>
+                            <th class="text-center" scope="col">Disponível</th>
+                            <th class="text-center" scope="col">Ultrapassado</th>
                             <th class="text-center"scope="col">Valor Mensal</th>
                         </tr>
                     </thead>
                 <tbody>
                     <tr>
-                        <th class="text-center" scope="row">JAMEF</th>
+                        <th class="text-center">JAMEF</th>
                         <td class="text-center">100</td>
                         <td class="text-center">300</td>
                         <td class="text-center">500</td>
