@@ -25,6 +25,12 @@ class DashboardController extends Controller
         return view('dashboard', compact('name', 'sms_credits', 'requests_quantity','extras'));
     }
 
+    public function search(Request $request)
+    {
+        $teste = $request->mes;
+        dd($teste);
+    }
+
     public function calculate_extras($sms_credits, $requests_quantity)
     {
         if($requests_quantity > $sms_credits)

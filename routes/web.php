@@ -18,7 +18,7 @@ use App\Http\Controllers;
 Route::get('/', [Controllers\LoginController::class, 'index'])->name('login');
 Route::post('/', [Controllers\LoginController::class, 'login']);
 Route::get('/dashboard', [Controllers\DashboardController::class, 'index'])->name('dashboard')->middleware('auth');
-Route::get('/resume', [Controllers\ResumeController::class, 'index'])->name('resume')->middleware('auth');
+Route::post('/dashboard', [Controllers\DashboardController::class, 'search']);
 Route::get('/settings', [Controllers\SettingsController::class, 'index'])->name('settings')->middleware('auth');
 Route::post('/settings', [Controllers\SettingsController::class, 'store']);
 Route::delete('/settings', [Controllers\SettingsController::class, 'destroy']);

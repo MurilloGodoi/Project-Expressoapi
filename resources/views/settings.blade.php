@@ -1,4 +1,4 @@
-@extends('layout')
+@extends('layouts.layout')
 @section('conteudo')
     @if(!empty($mensagem))
         <div class="alert alert-success">
@@ -42,13 +42,13 @@
         @if(!empty($apiname))
         <div class="col-5 offset-1">
             <div class="mb-3 bg-dark p-2 pl-3">
-                <h3 class="text-light">Seus Provedores</h3>
+                <h3 class="text-light">Seu provedor atual</h3>
             </div>
             <div class="table mt-3 ml-0">
                 <table>
                     <thead class="thead-light">
                     <tr>
-                        <th scope="col"><h6>Provedores</h6></th>
+                        <th scope="col"><h6>Provedor</h6></th>
                         <th scope="col"></th>
                     </tr>
                     </thead>

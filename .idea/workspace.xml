@@ -21,9 +21,17 @@
   <component name="ChangeListManager">
     <list default="true" id="e2c1beb3-abac-4259-9ec0-2e3520cb1e12" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/DashboardController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/DashboardController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ResumeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ResumeController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layout.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/dashboard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/layout.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/settings.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/settings.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -161,6 +169,9 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\expressoapi\resources\views\layouts" />
+      <recent name="C:\expressoapi\resources\views\charts" />
+      <recent name="C:\expressoapi\resources\views" />
       <recent name="C:\expressoapi\database\sql" />
     </key>
   </component>
@@ -184,7 +195,9 @@
       <workItem from="1607783638804" duration="5128000" />
       <workItem from="1607789886476" duration="135000" />
       <workItem from="1607804607184" duration="9692000" />
-      <workItem from="1607833589318" duration="379000" />
+      <workItem from="1607833589318" duration="9728000" />
+      <workItem from="1607874851778" duration="7216000" />
+      <workItem from="1607884704175" duration="3071000" />
     </task>
     <servers />
   </component>
@@ -204,18 +217,30 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="690" y="295" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1607732986416">
+    <state x="414" y="195" width="1092" height="728" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1607835451033">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="690" y="295" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1607732986416" />
+    <state x="414" y="195" width="1092" height="728" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1607835451033" />
+    <state x="690" y="295" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1607835458371">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="690" y="295" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1607835458371" />
     <state x="740" y="295" key="FileChooserDialogImpl" timestamp="1607742598804">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="740" y="295" key="FileChooserDialogImpl/0.0.1920.1080@0.0.1920.1080" timestamp="1607742598804" />
-    <state x="788" y="263" key="NewPhpClassDialog" timestamp="1607633669828">
+    <state x="788" y="263" key="NewPhpClassDialog" timestamp="1607838377581">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="788" y="263" key="NewPhpClassDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1607633669828" />
+    <state x="788" y="263" key="NewPhpClassDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1607838377581" />
+    <state x="794" y="463" key="NewPhpFileDialog" timestamp="1607838418856">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="794" y="463" key="NewPhpFileDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1607838418856" />
+    <state x="616" y="250" key="run.anything.popup" timestamp="1607878283275">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="616" y="250" key="run.anything.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1607878283275" />
     <state x="623" y="235" width="672" height="678" key="search.everywhere.popup" timestamp="1607635707757">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
