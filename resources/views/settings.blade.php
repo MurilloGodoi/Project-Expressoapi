@@ -1,22 +1,20 @@
 @extends('layout')
-@if(!empty($mensagem))
-    <div class="alert alert-success">
-        {{ $mensagem }}
-    </div>
-@endif
-
-@if($errors->any())
-    <div class="alert alert-danger">
-        <ul>
-            @foreach ($errors->all() as $error)
-                <li> {{$error}}</li>
-            @endforeach
-        </ul>
-    </div>
-@endif
-
 @section('conteudo')
+    @if(!empty($mensagem))
+        <div class="alert alert-success">
+            {{ $mensagem }}
+        </div>
+    @endif
 
+    @if($errors->any())
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li> {{$error}}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
 <div class="container-fluid">
 
     <div class="row ml-3 mr-3">

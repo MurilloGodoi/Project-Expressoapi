@@ -30,7 +30,7 @@
             </li>
         </ul>
     </div>
-    <p style="color: white">{{ $name }}</p>
+    <h6 class="nameuser" style="color: white">{{ $name }}</h6>
     <a href="/logout" class="text-danger">Sair</a>
 </nav>
 
