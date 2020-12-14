@@ -16,7 +16,7 @@
 </head>
 
 <body style="height: 100%">
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-3">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
     <a class="navbar-brand" href="{{ route('dashboard') }}">Expresso API</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -32,7 +32,7 @@
         </ul>
     </div>
     <h6 class="nameuser" style="color: white">{{ $name }}</h6>
-    <a href="/logout" class="text-danger">Sair</a>
+    <a href="/logout" class="text-danger m-3">Sair</a>
 </nav>
 
     @yield('conteudo')
