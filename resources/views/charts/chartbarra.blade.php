@@ -13,8 +13,15 @@
             datasets: [{
                 label: 'Números Diários de SMS' ,
                 backgroundColor: ['green','green','green','green','green','green','green',],
-                borderColor: 'rgb(255, 99, 132)',
-                data: [50, 20, 30, 10, 70, 18, 29]
+                data: [
+                    {{ $weekly_usage[0] }},
+                    {{ $weekly_usage[1] }},
+                    {{ $weekly_usage[2] }},
+                    {{ $weekly_usage[3] }},
+                    {{ $weekly_usage[4] }},
+                    {{ $weekly_usage[5] }},
+                    {{ $weekly_usage[6] }},
+                ]
 
             }]
         },
@@ -24,8 +31,8 @@
             scales: {
                 yAxes: [{
                     ticks: {
-                        beginAtZero: true
-
+                        beginAtZero: true,
+                        suggestedMax: 10
                     }
                 }]
             }
