@@ -14,7 +14,7 @@ class Plan extends Model
     public $timestamps = false;
     protected $fillable = [
         'Name',
-        'Requests',
+        'RequestsQuantity',
         'Price'
     ];
 

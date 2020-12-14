@@ -14,7 +14,9 @@ class UserPlanHistories extends Model
     public $timestamps = false;
     protected $fillable = [
         'DtStart',
-        'DtEnd'
+        'DtEnd',
+        'UserId',
+        'PlanId'
     ];
 
     public  function user()
@@ -24,6 +26,6 @@ class UserPlanHistories extends Model
 
     public  function plan()
     {
-        return $this->belongsToMany(Plan::class,'PlanId');
+        return $this->belongsTo(Plan::class,'PlanId');
     }
 }

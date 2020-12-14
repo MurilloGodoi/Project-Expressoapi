@@ -10,15 +10,16 @@ class UserPlan extends Model
     use HasFactory;
 
     protected $table = 'user_plans';
-    protected $primaryKey = 'Id';
+    protected $primaryKey = 'userId';
     public $timestamps = false;
     protected $fillable = [
-        'SMSCredits'
+        'SMSCredits',
+        'planId'
     ];
 
     public  function user()
     {
-        return $this->belongsToMany(User::class,'userId');
+        return $this->belongsTo(User::class,'userId');
     }
 
     public  function plan()

@@ -10,13 +10,12 @@ class UserApi extends Model
     use HasFactory;
 
     protected $table = 'userapi';
-    protected $primaryKey = 'ApiId';
+    protected $primaryKey = 'userId';
     public $timestamps = false;
     protected $fillable = [
         'Username',
         'Password',
-        'userId'
-
+        'ApiId'
     ];
 
     public  function user()

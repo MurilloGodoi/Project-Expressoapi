@@ -9,20 +9,27 @@ class UserApiRequest extends Model
 {
     use HasFactory;
 
-    protected $table = 'apis';
+    protected $table = 'user_api_requests';
     protected $primaryKey = 'Id';
     public $timestamps = false;
     protected $fillable = [
-        'Name'
+        'userId',
+        'planId',
+        'DtRequest',
+        'Url',
+        'Body',
+        'ResponseStatus',
+        'ResponseBody',
+        'PostActions'
     ];
 
     public  function user()
     {
-        return $this->belongsTo(User::class,'UserId');
+        return $this->belongsTo(User::class,'userId');
     }
 
     public  function plan()
     {
-        return $this->belongsTo(Plan::class,'PlanId');
+        return $this->belongsTo(Plan::class,'planId');
     }
 }

@@ -2,7 +2,6 @@
 
 namespace App\Models;
 
-use     Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
@@ -61,7 +60,7 @@ class User extends Authenticatable
 
     public  function userplanhistory()
     {
-        return $this->hasOne(UserPlanHistories::class, 'UserId');
+        return $this->hasMany(UserPlanHistories::class, 'UserId');
     }
 
     public function userplan()
@@ -71,6 +70,6 @@ class User extends Authenticatable
 
     public function userapirequest()
     {
-        return $this->hasOne(UserApiRequest::class, 'userId');
+        return $this->hasMany(UserApiRequest::class, 'userId');
     }
 }
