@@ -5,17 +5,17 @@
     <div class="row ml-3 mr-3">
         <div class="col-5">
             <div class="mb-3 bg-dark p-2 pl-3">
-                <h3 class="text-light">SMS</h3>
+                <h3 class="text-light">Consumo de Chamadas</h3>
             </div>
             @include('charts.chartdoughnut')
-            <div class="d-flex justify-content-around mt-3 p-2">
+            <div class="d-flex justify-content-around mt-3 p-2 bg-light">
                 <div class="d-flex flex-column text-center">
                     <p class="m-0">CONTRATADO</p>
                     <p class="text-success m-0">{{ $requests_quantity}}</p>
                 </div>
                 <div class="d-flex flex-column text-center">
                     <p class="m-0">UTILIZADO</p>
-                    <p class="text-primary m-0">{{ $requests_consumed}}</p>
+                    <p class="text-warning m-0">{{ $requests_consumed}}</p>
                 </div>
                 <div class="d-flex flex-column text-center">
                     <p class="m-0">DISPONÍVEL</p>
@@ -28,11 +28,11 @@
             </div>
 
             <br>
-            <div class="table-responsive">
+            <div class="table-responsive mt-4">
                 <table class="table">
                     <thead class="thead-light">
                     <tr>
-                        <th scope="col"><h4>Resumo do Plano Pacote SMS</h4></th>
+                        <th scope="col"><h4>Resumo do Plano Contratado</h4></th>
                         <th scope="col"></th>
                     </tr>
                     </thead>
@@ -42,29 +42,18 @@
                         <td>JAMEF</td>
                     </tr>
                     <tr>
-                        <td scope="row">Valor Mensal</td>
+                        <td scope="row">Valor Contratado</td>
                         <td>R$ 500,00</td>
                     </tr>
                     </tbody>
                 </table>
-            </div>
-            <br>
-
-            <div class="mb-3 bg-dark p-2 pl-3">
-                <h3 class="text-light">Números Diários de SMS</h3>
-            </div>
-
-            @include('charts.chartbarra')
-
-            <div class="text-center mt-3 p-2">
-                <h4>Uso médio diário de SMS: 8</h4>
             </div>
 
         </div>
 
         <div class="col-5 offset-1">
             <div class="mb-3 bg-dark p-2 pl-3">
-                <h3 class="text-light">Detalhes do Meu Plano SMS</h3>
+                <h3 class="text-light">Detalhes do Meu Plano</h3>
             </div>
 
             <form class="data" method="post">
@@ -98,6 +87,16 @@
                     </tr>
                 </tbody>
             </table>
+            </div>
+
+            <div class="mb-3 bg-dark p-2 pl-3 mt-4">
+                <h3 class="text-light">Chamadas Diáras Nos Últimos 7 Dias</h3>
+            </div>
+
+            @include('charts.chartbarra')
+
+            <div class="text-center mt-3 p-2 bg-light">
+                <h4>Uso médio diário: <b>{{ $daily_usage_mean }}</b></h4>
             </div>
         </div>
     </div>
