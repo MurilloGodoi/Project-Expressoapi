@@ -6,16 +6,21 @@
 <script>
     var chartoptionspizza = {
 
-    type: 'pie',
+    type: 'doughnut',
     data: {
-    labels: ['Usado', 'Livre',],
-
-
+    labels: ['Livre', 'Utilizado', 'Ultrapassado'],
     datasets: [{
     label: 'Gráfico',
-    backgroundColor: ['red', 'green'],
-    borderColor: 'rgb(255, 99, 132)',
-    data: [{{$requests_quantity}}, 50]
+    backgroundColor: ['#003f5c', '#ffa600', '#ff6361'],
+    data: [
+        {{$requests_available}},
+        @if ($extras > 0)
+            {{$requests_quantity}},
+        @else
+            {{$requests_consumed}},
+        @endif
+        {{$extras}},
+    ]
 
     }]
     },

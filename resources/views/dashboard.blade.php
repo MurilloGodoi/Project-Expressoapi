@@ -7,19 +7,19 @@
             <div class="mb-3 bg-dark p-2 pl-3">
                 <h3 class="text-light">SMS</h3>
             </div>
-            @include('charts.chartpizza')
+            @include('charts.chartdoughnut')
             <div class="d-flex justify-content-around mt-3 p-2">
                 <div class="d-flex flex-column text-center">
                     <p class="m-0">CONTRATADO</p>
-                    <p class="text-success m-0">{{ $sms_credits}}</p>
+                    <p class="text-success m-0">{{ $requests_quantity}}</p>
                 </div>
                 <div class="d-flex flex-column text-center">
                     <p class="m-0">UTILIZADO</p>
-                    <p class="text-primary m-0">{{ $requests_quantity}}</p>
+                    <p class="text-primary m-0">{{ $requests_consumed}}</p>
                 </div>
                 <div class="d-flex flex-column text-center">
                     <p class="m-0">DISPONÍVEL</p>
-                    <p class="text-primary m-0">{{ $requests_quantity}}</p>
+                    <p class="text-primary m-0">{{ $requests_available}}</p>
                 </div>
                 <div class="d-flex flex-column text-center">
                     <p class="m-0">ULTRAPASSADO</p>
@@ -84,7 +84,7 @@
                             <th class="text-center" scope="col">Utilizado</th>
                             <th class="text-center" scope="col">Disponível</th>
                             <th class="text-center" scope="col">Ultrapassado</th>
-                            <th class="text-center"scope="col">Valor Mensal</th>
+                            <th class="text-center" scope="col">Valor Mensal</th>
                         </tr>
                     </thead>
                 <tbody>
