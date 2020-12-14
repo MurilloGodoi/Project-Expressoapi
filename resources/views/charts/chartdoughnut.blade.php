@@ -8,7 +8,7 @@
 
     type: 'doughnut',
     data: {
-    labels: ['Livre', 'Utilizado', 'Ultrapassado'],
+    labels: ['Disponível', 'Utilizado', 'Ultrapassado'],
     datasets: [{
     label: 'Gráfico',
     backgroundColor: ['#003f5c', '#ffa600', '#ff6361'],
@@ -30,7 +30,10 @@
         scales: {
             yAxes: [{
                 ticks: {
-                    beginAtZero: true
+                    display: false
+                },
+                gridLines: {
+                    display: false
                 }
             }]
           }
