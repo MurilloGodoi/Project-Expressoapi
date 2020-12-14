@@ -1,3 +1,4 @@
+CREATE DATABASE [expressoapi]
 USE [expressoapi]
 GO
 /****** Object:  Table [dbo].[apis]    Script Date: 10/12/2020 15:35:17 ******/
