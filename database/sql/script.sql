@@ -185,3 +185,24 @@ REFERENCES [dbo].[users] ([Id])
 GO
 ALTER TABLE [dbo].[userapi] CHECK CONSTRAINT [FK_UserApi_userid]
 GO
+
+CREATE PROCEDURE dbo.get_api_usage @user_id INT
+AS
+SELECT COUNT(*) AS request_count FROM user_api_requests
+WHERE CAST(DtRequest AS DATE) >= (
+    SELECT max(DtStart) FROM user_plan_histories WHERE user_plan_histories.UserId = @user_id
+)
+  AND userId = @user_id;
+GO;
+
+CREATE PROCEDURE dbo.get_api_weekly_usage @user_id INT
+AS
+SELECT CAST(DtRequest AS DATE) AS request_date, COUNT(*) as request_count, DATEDIFF(DAY, CAST(DtRequest AS DATE), GETDATE()) AS days_ago
+FROM user_api_requests
+WHERE CAST(DtRequest AS DATE) >= (
+    SELECT max(DtStart) FROM user_plan_histories WHERE user_plan_histories.UserId = @user_id
+)
+  AND userId = @user_id
+  AND CAST(DtRequest AS DATE) > GETDATE() - 7
+GROUP BY CAST(DtRequest AS DATE);
+GO;
