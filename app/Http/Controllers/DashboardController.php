@@ -2,6 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Api;
+use App\Models\Plan;
+use App\Models\UserApi;
+use App\Models\UserPlan;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
@@ -12,6 +16,7 @@ class DashboardController extends Controller
     {
         $user = Auth::user();
         $name = $user->name;
+        $id = $user->Id;
 
         $requests_quantity = $this->get_requests_quantity_for($user);
         $requests_consumed = $this->get_requests_consumed_for($user);
@@ -21,6 +26,15 @@ class DashboardController extends Controller
         $weekly_usage = $this->get_weekly_usage_for($user);
         $daily_usage_mean = $this->calculate_daily_usage_mean($weekly_usage);
 
+        $userapi = UserApi::where('userId', $id)->first();
+        $apiid = $userapi->ApiId;
+        $provedor_name = Api::find($apiid)->Name;
+
+        $userplan = UserPlan::where('userId', $id)->first();
+        $userplan_id = $userplan->planId;
+        $plan = Plan::where('Id', $userplan_id)->first();
+        $price_plan = $plan->Price;
+
         return view('dashboard', compact(
             'name',
             'requests_consumed',
@@ -29,13 +43,9 @@ class DashboardController extends Controller
             'extras',
             'weekly_usage',
             'daily_usage_mean',
+            'provedor_name',
+            'price_plan'
         ));
-    }
-
-    public function search(Request $request)
-    {
-        $teste = $request->mes;
-        dd($teste);
     }
 
     private function calculate_extras($consumed, $total)
