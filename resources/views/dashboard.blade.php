@@ -101,12 +101,7 @@
             </div>
         </div>
     </div>
-    </div>
-
-<footer class="page-footer bg-dark font-small ">
-    <div class="footer-copyright text-center  py-3">© 2020 Copyright:
-        <a class="link-site" href="https://d2msystem.com/"> D2Msystem.com</a>
-    </div>
+</div>
 @endsection
 
 

@@ -5,7 +5,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" style="height: 100%">
 
 <head>
     <meta charset="UTF-8">
@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="<?php echo asset('css/style.css')?>" type="text/css">
 </head>
 
-<body>
+<body style="height: 100%">
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-3">
     <a class="navbar-brand" href="{{ route('dashboard') }}">Expresso API</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -37,7 +37,11 @@
 
     @yield('conteudo')
 
-
+<footer class="page-footer bg-dark font-small mt-auto">
+    <div class="footer-copyright text-center  py-3">© 2020 Copyright:
+        <a class="link-site" href="https://d2msystem.com/"> D2Msystem.com</a>
+    </div>
+</footer>
 </body>
 </html>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.js"></script>
