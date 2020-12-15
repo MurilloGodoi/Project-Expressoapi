@@ -43,7 +43,7 @@
                     </tr>
                     <tr>
                         <td scope="row">Valor Contratado</td>
-                        <td>{{$price_plan}}</td>
+                        <td>R$ {{$price_plan}}</td>
                     </tr>
                     </tbody>
                 </table>
