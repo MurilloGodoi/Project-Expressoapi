@@ -11,7 +11,7 @@
             labels: ['Dom.','Seg.', 'Ter.', 'Qua.', 'Qui.', 'Sex.', 'Sáb.'],
 
             datasets: [{
-                label: 'Números Diários de SMS' ,
+                label: 'Número Diário de Chamadas' ,
                 backgroundColor: ['green','green','green','green','green','green','green',],
                 data: [
                     {{ $weekly_usage[0] }},
